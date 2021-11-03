@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamhostDDNSClient", "DreamhostDDNSClient.csproj", "{857A8272-71D4-46CE-A5D6-E6F6B4F9002A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{857A8272-71D4-46CE-A5D6-E6F6B4F9002A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857A8272-71D4-46CE-A5D6-E6F6B4F9002A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857A8272-71D4-46CE-A5D6-E6F6B4F9002A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857A8272-71D4-46CE-A5D6-E6F6B4F9002A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A23EC80C-E610-4D67-A035-CD20A1B55B22}
+	EndGlobalSection
+EndGlobal
