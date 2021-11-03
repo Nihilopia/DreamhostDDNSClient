@@ -35,6 +35,7 @@ namespace DreamhostDDNSClient
             {
                 while (true)
                 {
+                    #region Get IP addresses
                     IPAddress clientIp = await GetClientIpAsync();
                     IPAddress dnsIp = null;
                     try
@@ -45,7 +46,9 @@ namespace DreamhostDDNSClient
                     {
                         Console.Error.WriteLine(ex.Message);
                     }
+                    #endregion
 
+                    #region Match IP addressess
                     _addressesMatch = clientIp.Equals(dnsIp);
 
                     if (!_addressesMatch)
@@ -53,16 +56,19 @@ namespace DreamhostDDNSClient
                         await _client.RemoveRecord(_domain, Enum.Parse<RecordType>(_recordType), dnsIp.ToString());
                         await _client.AddRecord(_domain, Enum.Parse<RecordType>(_recordType), clientIp.ToString());
                     }
+                    #endregion
 
                     Thread.Sleep(TimeSpan.FromMinutes(5));
                 }
             }
             catch (NullReferenceException)
             {
+                #region Restart process
                 Process process = Process.GetCurrentProcess();
                 Process.Start(process.MainModule.FileName);
 
                 Environment.Exit(-1);
+                #endregion
             }
         }
 
